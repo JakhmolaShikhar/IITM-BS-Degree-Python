@@ -47,7 +47,7 @@ code = "BK24M157"
 # Use int() to convert the last 3 characters into a number.
 # Use reverse slicing to reverse the code.
 
-product_type = code[2] # str: get the first 2 characters of code
+product_type = code[:2] # str: get the first 2 characters of code
 year_text = code[2:4] # str: get the year part from code as text
 batch = code[4] # str: get the batch character from code
 product_number = int(code[-3:]) # int: get the last 3 characters and convert them to int
