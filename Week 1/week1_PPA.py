@@ -59,3 +59,22 @@ reverse_code = code[::-1] # str: get code in reverse order
 
 #PPA4
 
+# Sample inputs (# note: The values given in the prefix code(grey) will be changed by the autograder according to the testcase while running them.
+first_name = "Ravi"
+last_name = "Kumar"
+course = "Python"
+symbol = "*"
+count = 5
+# <eoi>
+# Use + to join strings.
+# Use * to repeat the symbol.
+# Use slicing to build the short code.
+# Use in, ==, and < for string checks.
+
+full_name = first_name + " "  + last_name # str: join first_name and last_name with one space
+name_tag = course + ": " + full_name # str: join course, ": ", and full_name
+line = symbol * count # str: repeat symbol count times
+short_code = first_name[:2] + last_name[-2:] # str: join first 2 letters of first_name and last 2 letters of last_name
+has_py = "Py" in course # bool: check whether course contains "Py"
+same_names = first_name == last_name # bool: check whether first_name and last_name are equal
+comes_before = first_name < last_name # bool: check whether first_name comes before 
