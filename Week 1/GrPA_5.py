@@ -8,7 +8,7 @@ fifth_birthday = f"{day}/{month}/{year+5}" # str: fifth birthday formatted as da
 
 last_birthday = f"{day}/{month}/{year + age}" # str: last birthday formatted as day/month/year
 
-tenth_month = f"{day/{month + 10}/{year}}" # str: dob same day after 10 months formatted as day/month/year
+tenth_month = f"{day}/{((month - 1) + 10) % 12 + 1}/{year + ((month - 1) + 10) // 12}" # str: dob same day after 10 months formatted as day/month/year
 
 # print tenth_month, fifth_birthday and last_birthday in same line separated by comma and a space
 print(f"{tenth_month}, {fifth_birthday}, {last_birthday}")
