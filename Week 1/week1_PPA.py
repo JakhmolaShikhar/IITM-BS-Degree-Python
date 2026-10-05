@@ -78,3 +78,24 @@ short_code = first_name[:2] + last_name[-2:] # str: join first 2 letters of firs
 has_py = "Py" in course # bool: check whether course contains "Py"
 same_names = first_name == last_name # bool: check whether first_name and last_name are equal
 comes_before = first_name < last_name # bool: check whether first_name comes before 
+
+#PPA5
+
+# Read the input values first.
+# Then calculate item_cost and final_amount.
+# Create message using this format: item value, quantity value, final_amount value
+# Finally, print item, item_cost, final_amount, and message on separate lines.
+
+item = str(input()) # str: read item name using input()
+quantity = int(input()) # int: read quantity using input() and convert to int
+price = float(input()) # float: read price using input() and convert to float
+packing = float(input()) # float: read packing charge using input() and convert to float
+
+item_cost = quantity * price # float: multiply quantity and price
+final_amount = item_cost + packing # float: add item_cost and packing
+message = f"{item}, {quantity}, {final_amount}" # str: join values with comma and space
+
+print(item) # print item
+print(item_cost) # print item_cost
+print(final_amount) # print final_amount
+print(message) # print message
