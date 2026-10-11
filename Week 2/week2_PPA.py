@@ -42,3 +42,23 @@ else:
         print("approved")
     else:
         print("conditionally approved")
+
+
+#PPA_4
+
+units = int(input())
+has_solar = input() == "True"
+
+if units <= 100:
+    rate = 5
+elif units <= 300:
+  rate = 7
+else:
+    rate = 10
+
+total = units * rate
+
+if has_solar:
+    total *= 0.8
+
+print(f"{total:.02f}")
