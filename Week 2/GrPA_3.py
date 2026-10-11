@@ -68,12 +68,18 @@ else:
 is_time_valid = 1 <= int(time[:2]) <= 12# bool: True if time is valid (should be ranging from 1 - 12 both including) else False 
 
 # time_in_hrs:int should have the time in 24 hrs format . Try to do this in a single expression
-time_in_hrs = int(time[:2]) + (12 if time[:-2] == "PM" and int(time[:2]) != 12 else 0) - (12 if time[:2] == "AM" and int(time[:2]) == 12 else 0)
+time_in_hrs = (int(time[:2]) % 12) + (12 if time[-2:] == "PM" else 0)
 
 # time_of_day:str should have the time of the day as Morning, etc.. use "Invalid" if not withing the acceptable range
 
 # write your code here
 if not is_time_valid:
     time_of_day = "Invalid"
-elif 6 < int(time[:2]) < 12:
+elif 5 < time_in_hrs < 12:
     time_of_day = "Morning"
+elif 12 <= time_in_hrs < 16:
+    time_of_day = "Afternoon"
+elif 16 <= time_in_hrs < 20:
+    time_of_day = "Evening"
+else:
+    time_of_day = "Night"
