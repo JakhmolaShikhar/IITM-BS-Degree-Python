@@ -5,7 +5,7 @@ is_weekend = input() == "True"
 is_loyalty_member = input() == "True"
 is_online_payment = input() == "True"
 
-if room_type == "stnadard":
+if room_type == "standard":
     cost = 2000
 elif room_type == "deluxe":
     cost = 3500
