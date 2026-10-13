@@ -29,7 +29,35 @@ print(f"{cost:.02f}")
 #PPA_2
 
 
-#PPA_3
+check = input()
+
+if check == "armstrong_check":
+    number = int(input())
+    num_str = str(number)
+    num_digits = len(num_str)
+    armstrong_sum = sum(int(digit) ** num_digits for digit in num_str)
+    if armstrong_sum == number:
+        print("yes")
+    else:
+        print("no")
+
+elif check == "factorial_calculator":
+    n = int(input())
+    factorial = 1
+    for i in range(1, n + 1):
+        factorial *= i
+    print(factorial)
+
+elif check == "fizzbuzz_single":
+    number = int(input())
+    if number % 3 == 0 and number % 5 == 0:
+        print("fizzbuzz")
+    elif number % 3 == 0:
+        print("fizz")
+    elif number % 5 == 0:
+        print("buzz")
+    else:
+        print(number)#PPA_3
 
 age = int(input())
 monthly_income = int(input())
@@ -65,7 +93,6 @@ print(f"{total:.02f}")
 
 
 #PPA_5
-
 
 number = input()
 
