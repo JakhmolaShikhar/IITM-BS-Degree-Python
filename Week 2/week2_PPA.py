@@ -76,6 +76,9 @@ elif check == "compound_interest":
     compound_interest = principal * (1 + rate / 100) ** years - principal
     print(round(compound_interest))
 
+else:
+    print("Invalid Operation")
+
 #PPA_3
 
 age = int(input())
