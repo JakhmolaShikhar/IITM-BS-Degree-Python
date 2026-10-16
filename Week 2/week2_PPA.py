@@ -57,7 +57,26 @@ elif check == "fizzbuzz_single":
     elif number % 5 == 0:
         print("buzz")
     else:
-        print(number)#PPA_3
+        print(number)
+
+elif check == "vowel_count":
+    text = input()
+    vowel_count = sum(1 for char in text.lower() if char in "aeiou")
+    print(vowel_count)
+
+elif check == "num_digit_count":    
+    number = int(input())
+    digit_count = len(str(abs(number)))
+    print(digit_count)
+
+elif check == "compound_interest":
+    principal = int(input())
+    rate = float(input())
+    years = int(input())
+    compound_interest = principal * (1 + rate / 100) ** years - principal
+    print(round(compound_interest))
+
+#PPA_3
 
 age = int(input())
 monthly_income = int(input())
