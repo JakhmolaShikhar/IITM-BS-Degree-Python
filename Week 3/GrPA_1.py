@@ -11,35 +11,61 @@ task = input()
 if task == "sum_until_0":
     total = 0
     n = int(input())
-    while ...: # the terminal condition
-        ... # add n to the total
-        ... # take the next n form the input
+    while n != 0: # the terminal condition
+        total += n # add n to the total
+        n = int(input()) # take the next n form the input
     print(total)
 
 elif task == "total_price":
     total_price = 0
-    while ...: # repeat forever since we are breaking inside
+    while True: # repeat forever since we are breaking inside
         line = input()
-        if ...: # The terminal condition
+        if line == "END": # The terminal condition
             break
         quantity, price = line.split() # split uses space by default
-        quantity, price = ... # convert to ints
-        ... # accumulate the total price
+        quantity, price = int(quantity), int(price) # convert to ints
+        total_price += quantity * price  # accumulate the total price
     print(total_price)
 elif task == "only_ed_or_ing":
-    ...
+    while True:
+        word = input()
+        if word == "":
+            break
+        if word.endswith("ed") or word.endswith("ing"):
+            print(word)
 
 elif task == "reverse_sum_palindrome":
-    ...
+    total = 0
+    while True:
+        n = int(input())
+        if n == 0:
+            break
+        total += n
+        total_str = str(total)
+        if total_str == total_str[::-1]:
+            print(total) 
 
 elif task == "double_string":
-    ...
+    while True:
+        s = input()
+        if s == "":
+            break
+        print(s * 2)
 
 elif task == "odd_char":
-    ...
+    while True:
+        s = input()
+        if s == "":
+            break
+        print(s[::2])
 
 elif task == "only_even_squares":
-    ...
+    while True:
+        n = int(input())
+        if n == 0:
+            break
+        if n % 2 == 0:
+            print(n * n)
 
 elif task == "only_odd_lines":
     ...
