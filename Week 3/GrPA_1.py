@@ -29,21 +29,22 @@ elif task == "total_price":
 elif task == "only_ed_or_ing":
     while True:
         word = input()
-        if word == "":
+        if word == "STOP":
             break
         if word.endswith("ed") or word.endswith("ing"):
             print(word)
+
 
 elif task == "reverse_sum_palindrome":
     total = 0
     while True:
         n = int(input())
-        if n == 0:
+        if n == -1:
             break
-        total += n
-        total_str = str(total)
-        if total_str == total_str[::-1]:
-            print(total) 
+        reverse_n = int(str(n)[::-1])
+        if str(n + reverse_n) == str(n + reverse_n)[::-1]:
+            print(n)
+
 
 elif task == "double_string":
     while True:
@@ -52,12 +53,16 @@ elif task == "double_string":
             break
         print(s * 2)
 
+
 elif task == "odd_char":
     while True:
         s = input()
         if s == "":
             break
-        print(s[::2])
+        if s.endswith("."):
+            print(s[::2], end=" ")
+            break
+        
 
 elif task == "only_even_squares":
     while True:
@@ -68,4 +73,13 @@ elif task == "only_even_squares":
             print(n * n)
 
 elif task == "only_odd_lines":
-    ...
+    while True:
+        line = input()
+        if line == "":
+            break
+        if len(line) % 2 == 1:
+            print(line)
+
+
+else:
+    print("Invalid operation")
