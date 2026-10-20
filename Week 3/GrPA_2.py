@@ -17,6 +17,9 @@ string_iter - Given a string s of digits print the numerical value of the digit 
 Input - s:str
 list_iter - Print the elements of a list l line by line in the format {element} - type: {type} where the element is the current element being iterated by the for loop and type is the type of the element. (Even though list are not covered in this week, this is included to demonstrate the similarity between iterating characters in a str and items in a list)
 Input - l:list
+
+task = input()
+
 if task == 'factorial':
     n = int(input())
     result = 1
