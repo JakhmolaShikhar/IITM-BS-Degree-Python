@@ -64,7 +64,12 @@ elif task == 'from_k':
 
 
 elif task == 'string_iter':
-    ...
+    s = int(input())
+    prev = 1
+    for char in n:
+      num = int(char)
+      print(num * prev)
+      prev = num 
 
 elif task == 'list_iter':
     lst = eval(input()) # this will load the list from input
