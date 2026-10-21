@@ -53,6 +53,14 @@ elif task == 'sum_not_divisible':
 elif task == 'from_k':
     n = int(input())
     k = int(input())
+    count = 0
+    for i in range(k, 0, -1):
+      i_str = str(i)
+      if '5' not in i_str and '9' not in i_str and i%2 != 0:
+        print(i_str[::-1])
+        count += 1
+        if count == n:
+          break
 
 
 elif task == 'string_iter':

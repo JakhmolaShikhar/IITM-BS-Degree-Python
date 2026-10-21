@@ -22,3 +22,8 @@ elif task == "find_min":
       minimum = current
       
   print(minimum)
+  
+elif task == "prime_check":
+  n = int(input())
+  
+  
