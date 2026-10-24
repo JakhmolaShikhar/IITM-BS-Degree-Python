@@ -55,13 +55,11 @@ elif task == "double_string":
 
 
 elif task == "odd_char":
-    while True:
+    s = input()
+    while s[-1] != ".":
+        print(s[::2], end=" ")
         s = input()
-        if s == "":
-            break
-        if s.endswith("."):
-            print(s[::2], end=" ")
-            break
+    print(s[::2])
         
 
 elif task == "only_even_squares":
@@ -73,13 +71,19 @@ elif task == "only_even_squares":
             print(n * n)
 
 elif task == "only_odd_lines":
+    result = ""
+    lineno = 1
     while True:
-        line = input()
-        if line == "":
-            break
-        if len(line) % 2 == 1:
-            print(line)
+      line = input()
+      if line == "END":
+        break
+      if lineno%2:
+        result = line + "\n" + result
+      lineno += 1
+    print(result)
 
 
 else:
     print("Invalid operation")
+    
+''''''
