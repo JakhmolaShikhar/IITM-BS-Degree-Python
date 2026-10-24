@@ -85,5 +85,3 @@ elif task == "only_odd_lines":
 
 else:
     print("Invalid operation")
-    
-''''''
